@@ -5,51 +5,204 @@
     }
   },
   "data": {
-    "version": "1.0.0",
-    "attributes": {
-      "metadata": {
-        "title": "Search | Globus Search Portal"
-      },
-      "content": {
-        "headline": "Globus Search Portal"
-      },
-      "features": {
-        "transfer": false
-      },
-      "components": {
-        "Result": {
-          "heading": "entries[0].content.name",
-          "fields": [
-            {
-              "label": "Tags",
-              "property": "entries[0].content.tags"
-            },
-            {
-              "label": "Region",
-              "property": "entries[0].content.region"
+    "_static": {
+      "generator": {
+        "name": "@globus/static-search-portal"
+      }
+    },
+    "data": {
+      "version": "1.0.0",
+      "attributes": {
+        "metadata": {
+          "title": "XPCS",
+          "description": "XPCS Portal test"
+        },
+        "features": {
+          "jsonata": true
+        },
+        "theme": {
+          "colors": {
+            "brand": {
+              "50": "#edeaff",
+              "100": "#c8c3f1",
+              "200": "#a39be4",
+              "300": "#7f73d8",
+              "400": "#5b4bcc",
+              "500": "#4232b2",
+              "600": "#32268b",
+              "700": "#241b64",
+              "800": "#15103e",
+              "900": "#070419"
             }
-          ]
-        }
-      },
-      "globus": {
-        "search": {
-          "index": "78b92aca-e361-4307-8f66-bc448f20e2c3",
-          "facets": [
-            {
-              "name": "Tags",
-              "field_name": "tags",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "Region",
-              "field_name": "region",
-              "type": "terms",
-              "size": 10
-            }
-          ]
+          }
+        },
+        "content": {
+          "headline": "XPCS@APS"
+        },
+        "components": {
+          "Footer": {
+            "partners": [
+              {
+                "name": "Argonne National Laboratory",
+                "href": "https://www.anl.gov"
+              },
+              {
+                "name": "Globus",
+                "href": "https://www.globus.org"
+              }
+            ],
+            "disclaimer": "This site relies on ACDC, a resource of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357."
+          },
+          "ResultListing": {
+            "fields": [
+              {
+                "label": "Cycle",
+                "property": "entries[0].content.project_metadata.project_metadata.cycle"
+              },
+              {
+                "label": "Creator Name",
+                "property": "entries[0].content.dc.creators.[0].creatorName"
+              },
+              {
+                "label": "Dates",
+                "property": "entries[0].content.dc.year"
+              },
+              {
+                "label": "Parent",
+                "property": "entries[0].content.project_metadata.parent"
+              },
+              {
+                "label": "Total Time",
+                "property": "entries[0].content.project_metadata.total_time"
+              }
+            ]
+          },
+          "Result": {
+            "summary": "entries[0].content.subtitle",
+            "fields": [
+              {
+                "label": "Target Color",
+                "property": "entries[0].content.project_metadata.target_color",
+                "type": "rgba"
+              },
+              {
+                "label": "Best Color",
+                "property": "entries[0].content.project_metadata.best_so_far",
+                "type": "rgba"
+              },
+              {
+                "label": "Time to Best",
+                "property": "entries[0].content.project_metadata.time_to_best"
+              },
+              {
+                "label": "Total Time",
+                "property": "entries[0].content.project_metadata.total_time"
+              },
+              {
+                "label": "Convergence Graph",
+                "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+                "type": "image"
+              },
+              {
+                "label": "Plate 1",
+                "property": "$replace(entries[0].content.files[filename='plate_1.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+                "type": "image"
+              },
+              {
+                "label": "Plate 2",
+                "property": "$replace(entries[0].content.files[filename='plate_2.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+                "type": "image"
+              },
+              {
+                "label": "Solver",
+                "property": "entries[0].content.project_metadata.solver"
+              },
+              {
+                "label": "Workflow Steps",
+                "property": "entries[0].content.project_metadata.wf_steps"
+              },
+              {
+                "label": "Runs",
+                "property": "entries[0].content.project_metadata.runs"
+              }
+            ]
+          }
+        },
+        "globus": {
+          "application": {
+            "client_id": "6c5059d6-3702-4a2a-9afd-c19ff4e1a32b"
+          },
+          "search": {
+            "index": "6871e83e-866b-41bc-8430-e3cf83b43bdc",
+            "facets": [
+              {
+                "name": "Creator",
+                "field_name": "dc.creators.creatorName",
+                "type": "terms",
+                "size": 10
+              },
+              {
+                "name": "Parent Folder",
+                "field_name": "project_metadata.parent",
+                "type": "terms",
+                "size": 10
+              },
+              {
+                "name": "APS Cycle",
+                "field_name": "project_metadata.cycle",
+                "type": "terms",
+                "size": 10
+              },
+              {
+                "name": "Qmap",
+                "field_name": "project_metadata.reprocessing.qmap.name",
+                "type": "terms",
+                "size": 10
+              },
+              {
+                "name": "Reprocessed Datasets",
+                "field_name": "project_metadata.reprocessing.suffix",
+                "type": "terms",
+                "size": 10
+              }
+            ]
+          }
         }
       }
+    }
+  },
+  "components": {
+    "Result": {
+      "heading": "entries[0].content.name",
+      "fields": [
+        {
+          "label": "Tags",
+          "property": "entries[0].content.tags"
+        },
+        {
+          "label": "Region",
+          "property": "entries[0].content.region"
+        }
+      ]
+    }
+  },
+  "globus": {
+    "search": {
+      "index": "78b92aca-e361-4307-8f66-bc448f20e2c3",
+      "facets": [
+        {
+          "name": "Tags",
+          "field_name": "tags",
+          "type": "terms",
+          "size": 10
+        },
+        {
+          "name": "Region",
+          "field_name": "region",
+          "type": "terms",
+          "size": 10
+        }
+      ]
     }
   }
 }
