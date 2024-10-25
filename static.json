@@ -75,11 +75,6 @@
           "summary": "entries[0].content.subtitle",
           "fields": [
             {
-              "label": "Target Color",
-              "property": "entries[0].content.project_metadata.target_color",
-              "type": "rgba"
-            },
-            {
               "label": "Best Color",
               "property": "entries[0].content.project_metadata.best_so_far",
               "type": "rgba"
