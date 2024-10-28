@@ -104,9 +104,9 @@
               "property": "entries[0].content.project_metadata['measurement.instrument.acquisition.attenuation']"
             },
             {
-              "label": "Stage Z",
+              "label": "Exposure Time",
               "property": "entries[0].content.project_metadata['measurement.instrument.detector.exposure_time']"
-            },
+            }
           ]
         }
       },
