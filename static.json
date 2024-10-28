@@ -72,7 +72,7 @@
           ]
         },
         "Result": {
-          "summary": "entries[0].content.subtitle",
+          "summary": "entries[0].content.dc.titles.title",
           "fields": [
             {
               "label": "Best Color",
@@ -80,16 +80,16 @@
               "type": "rgba"
             },
             {
-              "label": "Time to Best",
-              "property": "entries[0].content.project_metadata.time_to_best"
+              "label": "APS Cycle",
+              "property": "entries[0].content.project_metadata.cycle"
             },
             {
-              "label": "Total Time",
-              "property": "entries[0].content.project_metadata.total_time"
+              "label": "Parent Folder",
+              "property": "entries[0].content.project_metadata.parent"
             },
             {
-              "label": "Convergence Graph",
-              "property": "$replace(entries[0].content.files[filename='convergence_graph.png'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
+              "label": "Scattering Pattern",
+              "property": "entries[0].content.files[filename='scattering_pattern.png'].url",
               "type": "image"
             },
             {
