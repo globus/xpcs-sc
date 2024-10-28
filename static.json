@@ -75,9 +75,9 @@
           "summary": "entries[0].content.dc.titles.title",
           "fields": [
             {
-              "label": "Best Color",
-              "property": "entries[0].content.project_metadata.best_so_far",
-              "type": "rgba"
+              "label": "Scattering Pattern",
+              "property": "entries[0].content.files[filename='scattering_pattern_log.png'].url",
+              "type": "image"
             },
             {
               "label": "APS Cycle",
@@ -88,31 +88,20 @@
               "property": "entries[0].content.project_metadata.parent"
             },
             {
-              "label": "Scattering Pattern",
-              "property": "entries[0].content.files[filename='scattering_pattern_log.png'].url",
-              "type": "image"
+              "label": "Datafile Name",
+              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.datafilename"
             },
             {
-              "label": "Plate 1",
-              "property": "$replace(entries[0].content.files[filename='plate_1.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
-              "type": "image"
+              "label": "Stage X",
+              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.stage_x"
             },
             {
-              "label": "Plate 2",
-              "property": "$replace(entries[0].content.files[filename='plate_2.jpg'].url, 'https://bb8d048a-2cad-4029-a9c7-671ec5d1f84d.e.globus.org', 'https://g-cd34a.fd635.8443.data.globus.org')",
-              "type": "image"
+              "label": "Stage Z",
+              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.stage_z"
             },
             {
-              "label": "Solver",
-              "property": "entries[0].content.project_metadata.solver"
-            },
-            {
-              "label": "Workflow Steps",
-              "property": "entries[0].content.project_metadata.wf_steps"
-            },
-            {
-              "label": "Runs",
-              "property": "entries[0].content.project_metadata.runs"
+              "label": "Stage Z",
+              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.attenuation"
             }
           ]
         }
