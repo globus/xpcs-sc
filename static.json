@@ -101,7 +101,7 @@
             },
             {
               "label": "Attenuation",
-              "property": "entries[0].content.project_metadata['measurement.instrument.acquisition.attenuation']"
+              "property": "entries[0].content.project_metadata.['measurement.instrument.acquisition.attenuation']"
             },
             {
               "label": "Exposure Time",
