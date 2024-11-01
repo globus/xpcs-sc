@@ -52,23 +52,19 @@
           "fields": [
             {
               "label": "Cycle",
-              "property": "entries[0].content.project_metadata.project_metadata.cycle"
-            },
-            {
-              "label": "Creator Name",
-              "property": "entries[0].content.dc.creators.[0].creatorName"
-            },
-            {
-              "label": "Dates",
-              "property": "entries[0].content.dc.year"
+              "property": "entries[0].content.project_metadata.cycle"
             },
             {
               "label": "Parent",
               "property": "entries[0].content.project_metadata.parent"
             },
             {
-              "label": "Total Time",
-              "property": "entries[0].content.project_metadata.total_time"
+              "label": "Creator Name",
+              "property": "entries[0].content.dc.creators[0].creatorName"
+            },
+            {
+              "label": "Dates",
+              "property": "entries[0].content.dc.dates[0].date"
             }
           ]
         },
@@ -94,19 +90,35 @@
             },
             {
               "label": "Stage X",
-              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.stage_x"
+              "property": "entries[0].content.project_metadata.'measurement.instrument.acquisition.stage_x'"
             },
             {
               "label": "Stage Z",
-              "property": "entries[0].content.project_metadata.measurement.instrument.acquisition.stage_z"
+              "property": "entries[0].content.project_metadata.'measurement.instrument.acquisition.stage_z'"
             },
             {
               "label": "Attenuation",
-              "property": "entries[0].content.project_metadata.['measurement.instrument.acquisition.attenuation']"
+              "property": "entries[0].content.project_metadata.'measurement.instrument.acquisition.attenuation'"
             },
             {
               "label": "Qins",
               "property": "entries[0].content.project_metadata.'xpcs.dnoq'"
+            },
+            {
+              "label": "Execution Tool",
+              "property": "entries[0].content.project_metadata.executable.name"
+            },
+            {
+              "label": "Source Tool",
+              "property": "entries[0].content.project_metadata.executable.source"
+            },
+            {
+              "label": "Source Tool Version",
+              "property": "entries[0].content.project_metadata.executable.version"
+            },
+            {
+              "label": "Execution Device",
+              "property": "entries[0].content.project_metadata.executable.device"
             },
             {
               "label": "Corr Execution Time in Seconds",
