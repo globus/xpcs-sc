@@ -114,7 +114,7 @@
             },
             {
               "label": "Source Tool Version",
-              "property": "entries[0].content.project_metadata.executable.version"
+              "property": "entries[0].content.project_metadata.executable.tool_version"
             },
             {
               "label": "Execution Device",
