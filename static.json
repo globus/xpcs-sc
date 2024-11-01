@@ -105,7 +105,7 @@
             },
             {
               "label": "Qins",
-              "property": "entries[0].content.project_metadata.['xpcs.dnoq']"
+              "property": "entries[0].content.project_metadata[\"xpcs.dnoq\"]"
             },
             {
               "label": "Corr Execution Time in Seconds",
