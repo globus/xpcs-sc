@@ -12,7 +12,8 @@
         "description": "XPCS Portal test"
       },
       "features": {
-        "jsonata": true
+        "jsonata": true,
+        "requireAuthentication": true
       },
       "theme": {
         "colors": {
