@@ -134,7 +134,10 @@
       },
       "globus": {
         "application": {
-          "client_id": "efc9322d-497f-4876-8ec6-4293cb6f91d9"
+          "client_id": "efc9322d-497f-4876-8ec6-4293cb6f91d9",
+          "scopes": [
+            "https://auth.globus.org/scopes/74defd5b-5f61-42fc-bcc4-834c9f376a4f/https"
+          ]
         },
         "search": {
           "index": "6871e83e-866b-41bc-8430-e3cf83b43bdc",
