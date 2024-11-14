@@ -83,6 +83,15 @@
               }
             },
             {
+              "label": "Scattering Pattern",
+              "property": "entries[0].content.files[filename='scatter_pattern_plotly.json'].url",
+              "type": "globus.embed",
+              "options": {
+                "collection": "74defd5b-5f61-42fc-bcc4-834c9f376a4f",
+                "renderer": "plotly"
+              }
+            },
+            {
               "label": "APS Cycle",
               "property": "entries[0].content.project_metadata.cycle"
             },
