@@ -84,7 +84,7 @@
             },
             {
               "label": "Scattering Pattern",
-              "property": "entries[0].content.files[filename='scattering_pattern_plotly.json'].url",
+              "property": "$replace(entries[0].content.files[filename='scattering_pattern_plotly.json'].url, 'globus://74defd5b-5f61-42fc-bcc4-834c9f376a4f', 'https://g-f6125.fd635.8443.data.globus.org/')",
               "type": "globus.embed",
               "options": {
                 "collection": "74defd5b-5f61-42fc-bcc4-834c9f376a4f",
